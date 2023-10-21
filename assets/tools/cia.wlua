@@ -7,14 +7,13 @@ local addzip = ui.Button(win,"Add Zip",62, 100,100,100)
 local addcia = ui.Button(win,"Add .CIA",325, 100,100,100)
 local label = ui.Label(win,"Add CIAS",100,0,50,50)
 local c = 0
-local drive = sys.Directory(sys.currentdirectory)
+local drive = sys.Directory(sys.currentdirectory) --Where the files will go. 
 local assetdir = sys.Directory(sys.currentdirectory).parent
 for entry in each(assetdir) do
     if entry.name == "settings.ini" then
       settingini = entry:open("read")
     end  
 end 
-local font = sys.File("LemonMilk.ttf")
 label.fontsize = 50
 win:show()
 
@@ -75,7 +74,7 @@ function addcia:onClick()
   if ui.confirm("Move (yes) or Copy? (no)") == "yes" then
     ui.error("Not Added Yet.")
   else
-    
+    ui.error("Not Added Yet.")
   end
 end
 
