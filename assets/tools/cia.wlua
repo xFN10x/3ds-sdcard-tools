@@ -94,4 +94,4 @@ end
 
 repeat
   ui.update()
-until win.visable
+until win.visible == false
